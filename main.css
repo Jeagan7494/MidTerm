@@ -1,0 +1,33 @@
+.background {
+	background-color: #CCCCCC ;
+
+}
+
+
+.mainNavBar {
+	background-color: #41948F ;
+	border-radius: 5px;
+	margin-top: 70px;
+	height: 3rem;
+	width: 95vw;
+	text-align: center;
+	margin: auto;
+	position: fixed;
+
+}
+
+.mainNavBar a {
+	text-decoration: none;
+	color: white;
+	font-family: cursive;
+	font-size: 1.5rem;
+}
+
+
+
+.mainNavBar li {
+	display: inline-block;
+	
+	display: inline;
+
+}
