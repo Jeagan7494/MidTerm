@@ -9,13 +9,24 @@
 
 
 }
-.headerContent {
-	text-align: center;
-	
 
-
+.logInForm {
+	padding-right: 0px;
 
 }
+
+.signUpLink {
+
+	color: white;
+}
+
+.navbar-default {
+	background-color: #99cc99;
+	border-color: #99cc99;
+
+}
+
+
 /*.mainNavBar {
 	background-color: #41948F ;
 	border-radius: 5px;
@@ -37,9 +48,3 @@
 */
 
 
-.mainNavBar li {
-	display: inline-block;
-	
-	display: inline;
-
-}
