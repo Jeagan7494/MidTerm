@@ -1,10 +1,22 @@
 .background {
-	background-color: #CCCCCC ;
+	background-color:  ;
 
 }
 
+.mainHeading {
+	background-color: #777;
+	height: 8rem;
 
-.mainNavBar {
+
+}
+.headerContent {
+	text-align: center;
+	
+
+
+
+}
+/*.mainNavBar {
 	background-color: #41948F ;
 	border-radius: 5px;
 	margin-top: 70px;
@@ -22,7 +34,7 @@
 	font-family: cursive;
 	font-size: 1.5rem;
 }
-
+*/
 
 
 .mainNavBar li {
