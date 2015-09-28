@@ -26,6 +26,20 @@
 
 }
 
+.buildACraft {
+font-size: 18px;
+font-weight: bold;
+
+}
+.buildACraft .small {
+font-size: 12px;
+font-weight: normal;
+}
+
+.indentParagraph {
+	padding-left: 50px;
+}
+
 
 /*.mainNavBar {
 	background-color: #41948F ;
