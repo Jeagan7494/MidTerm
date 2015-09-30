@@ -71,6 +71,7 @@ var modPodge = new Material ('mod podge')
 var woodFrames = new Material ('wood frames')
 var foam = new Material ('foam')
 
+$scope.materials.sort()
 
 
 //=================================================//
@@ -146,16 +147,7 @@ $scope.submitProject = function() {
 	}
 
 	
-
-	
-// // console.log($scope.project)
-
 }
-
-// console.log($scope.crafts[i])
-
- 
-
 
 
 }])
