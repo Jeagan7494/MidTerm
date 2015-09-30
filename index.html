@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="main.css">
 	
 </head>
-
+<!--==================================SCRAPZ HEADING=================================-->
 <body class="background" ng-controller="mainController">
 	<div class="mainHeading col-md-12">
 		<div class="container-fluid">
@@ -39,7 +39,7 @@
 		<!-- 	 -->
 		</div>
 	</div>
-	<!-- ====================Fixed navigation bar=======================================-->
+<!-- ====================Fixed navigation bar=======================================-->
 
 
 	<div>
@@ -68,7 +68,7 @@
 		</nav>
   	</div>
 	
-	<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+	<!--+++++++++++++++++++++++++++++++++++CRAFT SEARCH FORM++++++++++++++++++++++++++++++++++++++++++++++++-->
 	<div class="craftFinder">
 		<div class="container">
 			<div class="row">
@@ -116,21 +116,21 @@
 <!--I don't know how to add space between sections so I did the hack below for now-->
 
 	<div style="margin-top:50px"></div>
-<!--=================================================-->
+<!--==========================================Sample Crafts==============================-->
 	<div class="container">
 		<div class="row">
 			<div class="craftSquare col-md-4">
 				<a href="media/String Art Heart.pdf" class="">
 				<img src="media/Hearts.png" height="350" width="350">
 				<p class="buildACraft">String Art Hearts</p>
-				<p>This cute craft will be a hit of the class party!</p>
+				<p>This cute craft will be the hit of the class party!</p>
 			</div>
 			</a>
 			<div class="craftSquare col-md-4">
 				<a href="media/Duck Tape® Pouch.pdf" class="">
 				<img src="media/DuckTape.png" height="350" width="350">
 				<p class="buildACraft">Duck Tape® Pouch</p>
-				<p>This cute craft will be a hit of the class party!</p>
+				<p>This cute craft will be the hit of the class party!</p>
 				</a>
 			</div>
 		</div>
@@ -146,14 +146,14 @@
 				<a href="media/Spyglass.pdf" class="">
 				<img src="media/SpyGlass.png" height="350" width="350">
 				<p class="buildACraft">String Art Hearts</p>
-				<p>This cute craft will be a hit of the class party!</p>
+				<p>This cute craft will be the hit of the class party!</p>
 				</a>
 			</div>
 			<div class="craftSquare col-md-4">
 				<a href="media/Father's Day Mr. Mustache Duck Tape® Frame.pdf" class="">
 				<img src="media/Mustache.png" height="350" width="350">
 				<p class="buildACraft">String Art Hearts</p>
-				<p>This cute craft will be a hit of the class party!</p>
+				<p>This cute craft will be the hit of the class party!</p>
 				</a>
 			</div>
 		</div>
@@ -161,9 +161,21 @@
 
 
 
+<!--===============================HEARTS CRAFT EXAMPLE=============================-->
+	<div class="container" >
+		<div class="row">
+			<div  ng-repeat="object in crafts" ng-show="object.craftDisplay">
+				{{object.craftName}}
+				{{object.craftMaterials}}
+				{{object.craftDirections}}
+			</div>
+			
+		</div>
+	</div>
 
 
 
+<!--====================================FOOTER==================================-->
 <div class="panel panel-default">
   <div class="panel-footer">&copy; 2015 Jessey Eagan</div>
 </div>

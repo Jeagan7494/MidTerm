@@ -73,7 +73,7 @@ var foam = new Material ('foam')
 
 
 
-
+//=================================================//
 
 $scope.projectResources = []
 
@@ -82,27 +82,81 @@ $scope.projectMaterials = function(index) {
 
 $scope.projectResources.push($scope.materials)
 
-console.log($scope.projectResources)
+// console.log($scope.projectResources)
 }
 
+//==============================================//
 
+$scope.crafts =  [
+	{
+		craftName       : 'String Art Heart',
+		craftMaterials  : ['string', 'cardstock', 'scissors' ],
+		craftDirections : ['Step 1', 'Step 2', 'Step 3'],
+		craftDisplay	:  true
+	},
+
+	{
+		craftName       : 'Duct Tape Pouch',
+		craftMaterials  : ['construction paper', 'duct tape', 'scissors'],
+		craftDirections : ['Step 1', 'Step 2', 'Step 3'],
+		craftDisplay	:  true
+	},
+
+];
+
+
+//==============================================//
 $scope.submitProject = function() {
-	$scope.project = {
-		material01: $scope.material01,
-		material02: $scope.material02,
-		material03: $scope.material03
+	$scope.project = []
+	
+		$scope.project.push($scope.material01)
+		$scope.project.push($scope.material02)
+		$scope.project.push($scope.material03)
+
+
+	for(var i = 0; i < $scope.crafts.length; i++) {
+		$scope.crafts[i].craftDisplay = false
+		var craftList = []
+
+		for(var j = 0; j < $scope.crafts[i].craftMaterials.length; j++) {
+
+
+			for(var k = 0; k < $scope.project.length; k++) {
+				
+				if($scope.project[k].name === $scope.crafts[i].craftMaterials[j]) {
+					// $scope.crafts[i].craftDisplay = true
+					craftList.push($scope.project[k].name)
+
+				}
+
+
+
+
+
+
+				// console.log($scope.project[k])
+				// console.log($scope.crafts[i].craftMaterials[j])
+				// console.log('=-=-=-=-=-=-=-=-=-=-=')
+			}
+		}
+		console.log(craftList)
+		if(craftList.length >= 2) {
+			$scope.crafts[i].craftDisplay = true
+		}
 	}
-console.log($scope.project)
+
+	
+
+	
+// // console.log($scope.project)
 
 }
 
+// console.log($scope.crafts[i])
+
+ 
 
 
-// var heartCraft = function() {
-// 	if(string)
-
-
-// }
 
 }])
 
