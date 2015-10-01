@@ -1,6 +1,6 @@
-angular.module('craftApp', []);
+angular.module('craftApp', ['ui.bootstrap']);
 
-angular.module('craftApp').controller('mainController', ['$scope', function($scope) {
+angular.module('craftApp').controller('mainController', ['$scope', '$modal', function($scope, $modal) {
 
 
 
@@ -15,10 +15,6 @@ var Material = function(materialName) {
 	this.name = materialName;
 	
 	$scope.materials.push(this);
-	
-	var x = _.sortBy($scope.materials, function(object, name){
-		return object.name; 
-	});
 		
 }
 	
@@ -29,7 +25,7 @@ console.log($scope.materials)
 
 var pipeCleaners = new Material ('pipe cleaners')
 var glitter = new Material ('glitter')
-var pomPoms	= new Material (' pom poms')
+var pomPoms	= new Material ('pom poms')
 var feathers = new Material ('feathers')
 var cottonBalls = new Material ('cotton balls')
 var googlyEyes = new Material ('googly eyes')
@@ -75,8 +71,17 @@ var hotGlueGun = new Material ('hot glue gun')
 var modPodge = new Material ('mod podge')
 var woodFrames = new Material ('wood frames')
 var foam = new Material ('foam')
+var woodPallet = new Material ('wood pallet')
 
-$scope.materials.sort()
+$scope.materials.sort(function(a, b){
+	if(a.name > b.name) {
+		return 1;
+	} else if (b.name > a.name){
+		return -1;
+	} else {
+		return 0;
+	}
+})
 
 
 //=================================================//
@@ -95,8 +100,16 @@ $scope.projectResources.push($scope.materials)
 
 $scope.crafts =  [
 	{
-		craftName       : 'String Art Heart',
-		craftMaterials  : ['string', 'cardstock', 'scissors' ],
+		craftThumbnail	: 'media/Hope.jpg',
+		craftName       : 'DIY Wood Pallet Sign',
+		craftMaterials  : ['wood pallet', 'paint', 'paper' ],
+		craftDirections : ['Supplies Needed: Morbi at blandit magna, in eleifend sem. Etiam bibendum tincidunt neque, sit amet lobortis libero viverra a.', 'Step 1: Proin nec velit velit. In posuere, libero non interdum posuere, tellus elit sodales lectus, nec rutrum nibh nunc quis magna. Proin in felis eget ante venenatis maximus. Pellentesque at nunc nec sem lacinia tempor.', 'Step 2: Sed dapibus arcu eu ligula rutrum, ac finibus tortor venenatis. Nullam suscipit turpis dui, ut sollicitudin leo pharetra in. Fusce eget lectus pharetra urna volutpat venenatis. Donec eu felis nec nulla sodales auctor. Fusce ornare, nibh non feugiat venenatis, diam elit consectetur enim, at dignissim libero quam ac dolor.', 'Step 3: Pellentesque et aliquet mi. Nunc luctus erat nunc, in efficitur massa consequat et. Aenean a enim quis metus pulvinar porta at vel nisi. Maecenas condimentum massa nec sem pretium consequat.	Fusce aliquam nisl ac felis gravida dictum. Aliquam molestie leo vel iaculis blandit. Mauris risus est, aliquam non sem at, fringilla tristique orci. Aenean luctus justo id libero eleifend pretium. Ut vulputate vestibulum erat, non porta leo molestie in.',  'Step 4: Donec sit amet tincidunt enim, vitae molestie neque. Vestibulum vel augue eu urna dignissim congue. Nunc imperdiet lacus non neque dapibus, eu blandit dui finibus. Quisque fermentum sodales elit, sed consectetur urna semper eu. Sed porttitor tellus ac elit faucibus consequat.	Phasellus a eros odio. Cras efficitur urna est, eget placerat tellus venenatis tempor. Nam ante est, pharetra a tristique quis, viverra ut libero. Aliquam facilisis, sem eu dapibus condimentum, mi lorem sollicitudin dolor, ut molestie sem nunc sed velit.'],
+		craftDisplay	:  true
+	},
+
+	{
+		craftName       : 'Duct Tape Pouch',
+		craftMaterials  : ['construction paper', 'duct tape', 'scissors'],
 		craftDirections : ['Step 1', 'Step 2', 'Step 3'],
 		craftDisplay	:  true
 	},
@@ -108,7 +121,42 @@ $scope.crafts =  [
 		craftDisplay	:  true
 	},
 
+	{
+		craftName       : 'Duct Tape Pouch',
+		craftMaterials  : ['construction paper', 'duct tape', 'scissors'],
+		craftDirections : ['Step 1', 'Step 2', 'Step 3'],
+		craftDisplay	:  true
+	},
+
+	{
+		craftName       : 'Duct Tape Pouch',
+		craftMaterials  : ['construction paper', 'duct tape', 'scissors'],
+		craftDirections : ['Step 1', 'Step 2', 'Step 3'],
+		craftDisplay	:  true
+	},
+
+	{
+		craftName       : 'Duct Tape Pouch',
+		craftMaterials  : ['construction paper', 'duct tape', 'scissors'],
+		craftDirections : ['Step 1', 'Step 2', 'Step 3'],
+		craftDisplay	:  true
+	},
+
+	{
+		craftName       : 'Duct Tape Pouch',
+		craftMaterials  : ['construction paper', 'duct tape', 'scissors'],
+		craftDirections : ['Step 1', 'Step 2', 'Step 3'],
+		craftDisplay	:  true
+	},
+
+	{
+		craftName       : 'Duct Tape Pouch',
+		craftMaterials  : ['construction paper', 'duct tape', 'scissors'],
+		craftDirections : ['Step 1', 'Step 2', 'Step 3'],
+		craftDisplay	:  true
+	},
 ];
+	$scope.selectedCraft = $scope.crafts[0]
 
 
 //==============================================//
@@ -135,14 +183,6 @@ $scope.submitProject = function() {
 
 				}
 
-
-
-
-
-
-				// console.log($scope.project[k])
-				// console.log($scope.crafts[i].craftMaterials[j])
-				// console.log('=-=-=-=-=-=-=-=-=-=-=')
 			}
 		}
 		console.log(craftList)
@@ -153,12 +193,35 @@ $scope.submitProject = function() {
 
 	
 }
+$scope.open = function (index) {
+	$scope.selectedCraft = $scope.crafts[index]
+	console.log($scope.selectedCraft)
+    var modalInstance = $modal.open({
+      animation: $scope.animationsEnabled,
+      templateUrl: 'craftModal',
+      controller: 'ModuleController',
+      resolve: {
+        items: function () {
+          return $scope.selectedCraft;
+        }
+      }
 
+    });
+}
 
 }])
 
 
+angular.module('craftApp').controller('ModuleController', ['$scope', '$modalInstance', 'items', function($scope, $modalInstance, items) {
+	$scope.selectedCraft = items;
 
+
+
+$scope.close = function () {
+	$modalInstance.close($scope.selectedCraft);
+};
+	
+}])
 
 
 

@@ -1,5 +1,5 @@
 .background {
-	background-color:  ;
+	background-color: #e3e3e3 ;
 
 }
 
@@ -38,6 +38,32 @@ font-weight: normal;
 
 .indentParagraph {
 	padding-left: 50px;
+}
+
+.thumbnail {
+	height: 200px;
+	width: 200px;
+	margin-bottom: 0px;
+}
+
+.craftTitle {
+	font-family: Georgia, Serif;
+	font-size: 16px;
+	font-weight: 600;
+	margin-bottom: 50px;
+
+}
+.description {
+
+
+}
+
+.craftDisplay {
+	display: inline-block;
+}
+.thumbnail {
+	display: inline-block;
+
 }
 
 /*.suppliesSearch {
