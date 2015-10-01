@@ -14,12 +14,17 @@ var Material = function(materialName) {
 
 	this.name = materialName;
 	
-	$scope.materials.push(this)
-
+	$scope.materials.push(this);
+	
+	var x = _.sortBy($scope.materials, function(object, name){
+		return object.name; 
+	});
+		
 }
+	
 
-// console.log($scope.materials)
 
+console.log($scope.materials)
 
 
 var pipeCleaners = new Material ('pipe cleaners')
