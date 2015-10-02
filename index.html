@@ -57,11 +57,10 @@
 	    			<div class="collapse navbar-collapse" id="#navBarCollapse">
 	      
 	      				<ul class="nav navbar-nav">
-							<li class="active"><a href="######">Home</a></li>
-							<li><a href="######">About</a></li>
-							<li><a href="######">Search Crafts by Supplies</a></li>
-							<li><a href="######">My Craft Box</a></li>
-							<li><a href="######">Holiday Crafts</a></li>
+							<li ng-click="tab = 1"><a href="######">Home</a></li>
+							<li ng-click="tab = 2"><a href="######">About</a></li>
+							<li ng-click="tab = 3"><a href="######">My Craft Box</a></li>
+							<li ng-click="tab = 4"><a href="######">Holiday Crafts</a></li>
 						</ul>
 	    			</div>
 	    		</div>
@@ -116,12 +115,12 @@
 
 <!--I don't know how to add space between sections so I did the hack below for now-->
 
-	<div style="margin-top:50px"></div>
+	<div style="margin-top:20px"></div>
 
  
 
-<!--===============================HEARTS CRAFT EXAMPLE=============================-->
-	<div class="container">
+<!--===============================CRAFT THUMBNAILS=============================-->
+	<div class="container craftsss">
 		<div class="row">
 			<div ng-repeat="object in crafts"  class="header col-md-3 craftsDisplay">
 				<div ng-show="object.craftDisplay" >

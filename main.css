@@ -25,6 +25,10 @@
 	border-color: #99cc99;
 
 }
+.craftsss {
+	border-top: 1px solid gray;
+	padding-top: 25px;
+}
 
 .buildACraft {
 font-size: 18px;
