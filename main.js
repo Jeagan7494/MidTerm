@@ -80,6 +80,7 @@ var toddler = new Material ('toddler')
 var corkboard = new Material ('corkboard')
 var crochetHooks = new Material ('crochet hooks')
 var wineCorks = new Material ('corks')
+var wireHanger = new Material ('wire hanger')
 
 
 //================================================//
