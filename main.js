@@ -79,6 +79,7 @@ var eucerinCream = new Material ('eucerin cream')
 var toddler = new Material ('toddler')
 var corkboard = new Material ('corkboard')
 var crochetHooks = new Material ('crochet hooks')
+var wineCorks = new Material ('corks')
 
 
 //================================================//
