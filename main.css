@@ -1,11 +1,39 @@
+
+
 .background {
 	background-color: #e3e3e3 ;
 
 }
 
+.navbar-default .navbar-nav > li > a {
+    color: #F1F1DA;
+}
+
+.navbar-default {
+	background-color: #0C596F;
+	border-color: #0C596F;
+	margin-bottom: 0px;
+	font-size: 18px;
+	border-radius: 0;
+
+
+}
+
 .mainHeading {
-	background-color: #777;
-	height: 8rem;
+	background-color: #878787;
+	/*height: 25rem;*/
+
+}
+
+
+.headerContent {
+	/*margin-top: 5rem;*/
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	height: 25%;
+	width: 25%;
+	text-align: center;
 
 
 }
@@ -20,34 +48,39 @@
 	color: white;
 }
 
-.navbar-default {
-	background-color: #99cc99;
-	border-color: #99cc99;
 
+
+/*.navText {
+	color: #3CA198;*/
 }
 .craftsss {
 	border-top: 1px solid gray;
 	padding-top: 25px;
+	margin-left: -50px;
 }
 
 .buildACraft {
 font-size: 18px;
 font-weight: bold;
+display: inline-block;
+margin: 0 auto;
 
 }
+
 .buildACraft .small {
 font-size: 12px;
 font-weight: normal;
 }
 
 .indentParagraph {
-	padding-left: 50px;
+	padding-left: 20px;
 }
 
 .thumbnail {
-	height: 200px;
-	width: 200px;
-	margin-bottom: 0px;
+	display: inline-block;
+	height: 150px;
+	width: 150px;
+
 }
 
 .craftTitle {
@@ -64,12 +97,16 @@ font-weight: normal;
 
 .craftDisplay {
 	display: inline-block;
+	float:left;
+	margin: 0 auto;
+	padding: 0;
 }
-.thumbnail {
-	display: inline-block;
 
+
+.submitSupplies {
+	padding-left: 30px;
+	padding-right: 30px;
 }
-
 /*.suppliesSearch {
 	border-bottom: 1px solid gray;
 
@@ -94,5 +131,18 @@ font-weight: normal;
 	font-size: 1.5rem;
 }
 */
+@media (min-width:768px) { 
+	.navbar > .container {
+	    text-align: center;
+	    display: inline-block;
+	}
+
+	.collapse.navbar-collapse#centerednav {
+	    float: none;
+	    display: inline-block !important;
+	    width: auto;
+	    clear: none;
+	}
+}
 
 

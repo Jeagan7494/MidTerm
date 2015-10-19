@@ -13,35 +13,9 @@
 	<link rel="stylesheet" href="main.css">
 	
 </head>
-<!--==================================SCRAPZ HEADING=================================-->
-<body class="background" ng-controller="mainController">
-	<div class="mainHeading col-md-12">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-md-4">
-					<img class="headerContent" src="media/scrapzzzz.jpg">
-				</div>
-				<div class="col-md-6 col-md-offset-2 text-right logInForm">
-						<form class="form-inline">
-  						<div class="form-group">
-    						<label for="inputEmail">Email address</label>
-    						<input type="email"  id="inputEmail" placeholder="Email">
-  						</div>
-  						<div class="form-group">
-    						<label for="inputPassword">Password</label>
-    						<input type="password"  id="inputPassword" placeholder="	Password">
-  						</div>
-						<a class="btn btn-default" href="#" role="button">Log in</a>
-					</form>
-				</div>
-			
-				<p class="text-right">Not a member?<a class="signUpLink" href="##">Sign Up Here!</a></p>	
-			</div>
-		<!-- 	 -->
-		</div>
-	</div>
-<!-- ====================Fixed navigation bar=======================================-->
 
+<body class="background" ng-controller="mainController">
+<!-- ====================Fixed navigation bar=======================================-->
 
 	<div>
 		<nav class="navbar navbar-default col-md-12" role="navigation">
@@ -57,22 +31,57 @@
 	    			<div class="collapse navbar-collapse" id="#navBarCollapse">
 	      
 	      				<ul class="nav navbar-nav">
-							<li ng-click="tab = 1"><a href="######">Home</a></li>
-							<li ng-click="tab = 2"><a href="######">About</a></li>
-							<li ng-click="tab = 3"><a href="######">My Craft Box</a></li>
-							<li ng-click="tab = 4"><a href="######">Holiday Crafts</a></li>
+							<li class="navBarBtns"ng-click="tab = 1"><a href="######">Home</a></li>
+							<li class="navBarBtns"ng-click="tab = 2"><a href="######">About</a></li>
+							<li class="navBarBtns"ng-click="tab = 3"><a href="######">My Craftbox</a></li>
+							<!-- <li ng-click="tab = 4"><a href="######">Holiday Crafts</a></li> -->
+						</ul>
+						<ul class="nav navbar-nav navbar-right hidden-xs">
+							
+							<li><button class="btn btn-default" href="#" role="button">Log in</button></li>
+							
+							<li><button class="btn btn-default" href="#" role="button">Sign Up</button></li>
+							
 						</ul>
 	    			</div>
 	    		</div>
 			</div>
 		</nav>
   	</div>
+<!--==================================SCRAPZ HEADING=================================-->
+	<div class="mainHeading col-md-12">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12 col-sm-2">
+					<img class="img-responsive text-center headerContent" src="media/LGscrapzlogo.png">
+				</div>
+				<!-- <div class="col-md-6 col-md-offset-2 col-sm-4 col-sm-offset-1 text-right"> -->
+						<!-- <form class="form-inline">
+  						<div class="form-group">
+    						<label for="inputEmail">Email address</label>
+    						<input type="email"  id="inputEmail" placeholder="Email">
+  						</div>
+  						<div class="form-group">
+    						<label for="inputPassword">Password</label>
+    						<input type="password"  id="inputPassword" placeholder="	Password">
+  						</div> -->
+						<!-- <button class="btn btn-default" href="#" role="button">Log in</button>
+						<button class="btn btn-default" href="#" role="button">Sign Up</button> -->
+					<!-- </form> -->
+				<!-- </div> -->
+			
+				<!-- <p class="text-right">Not a member?<a class="signUpLink" href="##">Sign Up Here!</a></p> -->
+			</div>
+		<!-- 	 -->
+		</div>
+	</div>
+
 	
-	<!--+++++++++++++++++++++++++++++++++++CRAFT SEARCH FORM++++++++++++++++++++++++++++++++++++++++++++++++-->
+	<!--+++++++++++++++++++++++++++CRAFT SEARCH FORM++++++++++++++++++++++++++++++-->
 	<div class="craftFinder">
 		<div class="container">
 			<div class="row">
-				<div col-md-8 col-md-offset-2>
+				<div col-md-8 text-left >
 					<p class="buildACraft">Build-A-Craft <span class="small">(find crafts with supplies you have on hand)</span> </p>
 					<p class="indentParagraph" >Add your supplies here: </p>
 
@@ -85,27 +94,27 @@
 <div class="container suppliesSearch">
 	<form>
 		<div class="row">
-			<div class="form-group col-md-2 col-md-offset-1" >
+			<div class="form-group col-md-3" >
 				<select ng-model="material01" ng-options="material as material.name for material in materials" ng-change="projectMaterials($index)" id="inputIngredient">
 				</select>
 			</div>
-				<div class=" col-md-1 glyphicon glyphicon-plus text-center">
+				<!-- <div class=" col-md-1 glyphicon glyphicon-plus text-center">
 
-				</div>
-			<div class="form-group col-md-2" >
+				</div> -->
+			<div class="form-group col-md-3" >
 				<select ng-model="material02" ng-options="material as material.name for material in materials"  id="inputIngredient">
 				</select>
 			</div>
-				<div class=" col-md-1 glyphicon glyphicon-plus text-center">
+				<!-- <div class=" col-md-1 glyphicon glyphicon-plus text-center">
 
-				</div>
-			<div class="form-group col-md-2" >
+				</div> -->
+			<div class="form-group col-md-3" >
 				<select ng-model="material03" ng-options="material as material.name for material in materials"  id="inputIngredient">
 				</select>
 			</div>
 
-			<div class="form-group col-md-2 col-md-offset-1" >
-							<a class="btn btn-default" ng-click="submitProject()" href="#" role="button">Submit</a>
+			<div class="form-group col-md-3" >
+				<button class="btn btn-default submitSupplies" ng-click="submitProject()" href="#" role="button">Submit</button>
  
 		</div>	
 
@@ -121,14 +130,14 @@
 
 <!--===============================CRAFT THUMBNAILS=============================-->
 	<div class="container craftsss">
-		<div class="row">
-			<div ng-repeat="object in crafts"  class="header col-md-3 craftsDisplay">
+		<div class="row" >
+			<div ng-repeat="object in crafts"  class="row col-md-2 craftDisplay">
 				<div ng-show="object.craftDisplay" >
-					<img ng-click="open($index)" data-toggle="modal" data-target="#craftModal" class = "thumbnail" ng-src="{{object.craftThumbnail}}"/>
+					<img ng-click="open($index)" data-toggle="modal" data-target="#craftModal" class ="thumbnail" ng-src="{{object.craftThumbnail}}"/>
 					<div class= "craftTitle">{{object.craftName}}</div> 
 				</div>
 			</div>
-	<!--======================================================-->
+	<!--===================Craft Modal===================================-->
 			
 			<script type="text/ng-template" id="craftModal" >
 				
@@ -150,6 +159,26 @@
 			</script>
 		</div>	
 	</div>
+<!--===================================== Craft form ===========================-->
+
+
+<div class="col-md-12 col-sm-4 col-sm-offset-1 text-right">
+						<form class="form-inline">
+  						<div class="form-group">
+    						<label for="craftName">Name of Craft</label>
+    						<input type="craft"  id="craftName" placeholder="Enter craft name here">
+  						</div>
+  						<div class="form-group">
+    						<label for="inputSupplies">Suplies List</label>
+    						<input type="supplies" id="inputSupplies" placeholder="Enter supplies here">
+  						</div>
+						<div class="form-group">
+    						<label for="inputInstructions">Instructions</label>
+    						<input type="instructions" id="inputInstructions" placeholder="Enter instructions here">
+  						</div>
+					</form>
+				</div>
+
 
 
 <!--====================================FOOTER==================================-->

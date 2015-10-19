@@ -83,7 +83,7 @@ var wineCorks = new Material ('corks')
 var wireHanger = new Material ('wire hanger')
 
 
-//================================================//
+//==============Alphabetical Order==================//
 $scope.materials.sort(function(a, b){
 	if(a.name > b.name) {
 		return 1;
@@ -95,7 +95,7 @@ $scope.materials.sort(function(a, b){
 })
 
 
-//=================================================//
+//====================Dropdowns=====================//
 
 $scope.projectResources = []
 
@@ -107,7 +107,7 @@ $scope.projectResources.push($scope.materials)
 // console.log($scope.projectResources)
 }
 
-//==============================================//
+//===============Craft Thumbnail Links===============//
 
 $scope.crafts =  [
 	{
@@ -178,7 +178,7 @@ $scope.crafts =  [
 	$scope.selectedCraft = $scope.crafts[0]
 
 
-//==============================================//
+//==================Submit from Dropdowns=================//
 $scope.submitProject = function() {
 	$scope.project = []
 	
@@ -228,6 +228,22 @@ $scope.open = function (index) {
     });
 }
 
+
+$scope.open = function (index) {
+	$scope.selectedCraft = $scope.crafts[index]
+	console.log($scope.selectedCraft)
+    var modalInstance = $modal.open({
+      animation: $scope.animationsEnabled,
+      templateUrl: 'logInModal',
+      controller: 'ModuleController',
+      resolve: {
+        items: function () {
+          return $scope.selectedCraft;
+        }
+      }
+
+    });
+}
 }])
 
 
