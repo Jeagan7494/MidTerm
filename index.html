@@ -15,6 +15,18 @@
 </head>
 
 <body class="background" ng-controller="mainController">
+
+<!--==================================SCRAPZ HEADING=================================-->
+	<div class="mainHeading col-xs-12">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12">
+					<img class="img-responsive text-center headerContent" src="media/LGscrapzlogo.png">
+				</div>
+			</div>
+		<!-- 	 -->
+		</div>
+	</div>
 <!-- ====================Fixed navigation bar=======================================-->
 
 	<div>
@@ -30,17 +42,19 @@
 	  				</div>
 	    			<div class="collapse navbar-collapse" id="#navBarCollapse">
 	      
-	      				<ul class="nav navbar-nav">
+	      				<ul class="nav navbar-nav col-md-6">
 							<li class="navBarBtns"ng-click="tab = 1"><a href="######">Home</a></li>
 							<li class="navBarBtns"ng-click="tab = 2"><a href="######">About</a></li>
 							<li class="navBarBtns"ng-click="tab = 3"><a href="######">My Craftbox</a></li>
+							<li class="navBarBtns"ng-click="tab = 3"><a href="######">Submit a Craft!</a></li>
+
 							<!-- <li ng-click="tab = 4"><a href="######">Holiday Crafts</a></li> -->
 						</ul>
-						<ul class="nav navbar-nav navbar-right hidden-xs">
+						<ul class="nav navbar-nav navbar-right col-md-2 col-md-offset-4 text-right">
 							
-							<li><button class="btn btn-default" href="#" role="button">Log in</button></li>
+							<li><a class="login" href="#">Log in</a></li>
 							
-							<li><button class="btn btn-default" href="#" role="button">Sign Up</button></li>
+							<li><a class="signup" href="#">Sign Up</a></li>
 							
 						</ul>
 	    			</div>
@@ -48,42 +62,16 @@
 			</div>
 		</nav>
   	</div>
-<!--==================================SCRAPZ HEADING=================================-->
-	<div class="mainHeading col-md-12">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-md-12 col-sm-2">
-					<img class="img-responsive text-center headerContent" src="media/LGscrapzlogo.png">
-				</div>
-				<!-- <div class="col-md-6 col-md-offset-2 col-sm-4 col-sm-offset-1 text-right"> -->
-						<!-- <form class="form-inline">
-  						<div class="form-group">
-    						<label for="inputEmail">Email address</label>
-    						<input type="email"  id="inputEmail" placeholder="Email">
-  						</div>
-  						<div class="form-group">
-    						<label for="inputPassword">Password</label>
-    						<input type="password"  id="inputPassword" placeholder="	Password">
-  						</div> -->
-						<!-- <button class="btn btn-default" href="#" role="button">Log in</button>
-						<button class="btn btn-default" href="#" role="button">Sign Up</button> -->
-					<!-- </form> -->
-				<!-- </div> -->
-			
-				<!-- <p class="text-right">Not a member?<a class="signUpLink" href="##">Sign Up Here!</a></p> -->
-			</div>
-		<!-- 	 -->
-		</div>
-	</div>
+
 
 	
 	<!--+++++++++++++++++++++++++++CRAFT SEARCH FORM++++++++++++++++++++++++++++++-->
 	<div class="craftFinder">
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row">
-				<div col-md-8 text-left >
-					<p class="buildACraft">Build-A-Craft <span class="small">(find crafts with supplies you have on hand)</span> </p>
-					<p class="indentParagraph" >Add your supplies here: </p>
+				<div class="col-md-8 text-left indentParagraph1" >
+					<div class="buildACraft">Build-A-Craft <span class="small">(find crafts with supplies you have on hand)</span> </div>
+					<p class="indentParagraph2" >Add your supplies here: </p>
 
 				
 				</div>
@@ -130,7 +118,7 @@
 
 <!--===============================CRAFT THUMBNAILS=============================-->
 	<div class="container craftsss">
-		<div class="row" >
+		<div class="row">
 			<div ng-repeat="object in crafts"  class="row col-md-2 craftDisplay">
 				<div ng-show="object.craftDisplay" >
 					<img ng-click="open($index)" data-toggle="modal" data-target="#craftModal" class ="thumbnail" ng-src="{{object.craftThumbnail}}"/>

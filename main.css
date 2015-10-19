@@ -10,7 +10,7 @@
 }
 
 .navbar-default {
-	background-color: #0C596F;
+	background-color: #1D404E;
 	border-color: #0C596F;
 	margin-bottom: 0px;
 	font-size: 18px;
@@ -31,9 +31,9 @@
 	display: block;
 	margin: 0 auto;
 	text-align: center;
-	height: 25%;
-	width: 25%;
-	text-align: center;
+	height: 15%;
+	width: 15%;
+	
 
 
 }
@@ -72,9 +72,13 @@ font-size: 12px;
 font-weight: normal;
 }
 
-.indentParagraph {
-	padding-left: 20px;
+
+.indentParagraph1 {
+	padding-left: 12%;
 }
+/*.indentParagraph2 {
+	padding-left: 5%;
+}*/
 
 .thumbnail {
 	display: inline-block;
