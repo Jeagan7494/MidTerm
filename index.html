@@ -10,6 +10,8 @@
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.4/ui-bootstrap-tpls.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.js"></script>
 	<link rel="stylesheet" href="main.css">
 	
 </head>
@@ -17,7 +19,7 @@
 <body class="background" ng-controller="mainController">
 
 <!--==================================SCRAPZ HEADING=================================-->
-	<div class="mainHeading col-xs-12">
+	<div class="mainHeading">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-xs-12">
@@ -29,39 +31,37 @@
 	</div>
 <!-- ====================Fixed navigation bar=======================================-->
 
-	<div>
-		<nav class="navbar navbar-default col-md-12" role="navigation">
+	
+		<div class="navbar navbar-default" role="navigation">
 	  		<div class="container-fluid">
-	  			<div class="row">
-	  				<div class="navbar-header">
-	  					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navBarCollapse">
-	  						<span class="icon-bar"></span>
-	  						<span class="icon-bar"></span>
-	  						<span class="icon-bar"></span>
-	  					</button>
-	  				</div>
-	    			<div class="collapse navbar-collapse" id="#navBarCollapse">
-	      
-	      				<ul class="nav navbar-nav col-md-6">
-							<li class="navBarBtns"ng-click="tab = 1"><a href="######">Home</a></li>
-							<li class="navBarBtns"ng-click="tab = 2"><a href="######">About</a></li>
-							<li class="navBarBtns"ng-click="tab = 3"><a href="######">My Craftbox</a></li>
-							<li class="navBarBtns"ng-click="tab = 3"><a href="######">Submit a Craft!</a></li>
+	  			<div class="navbar-header">
+	  				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navBarCollapse" aria-expanded="false">
+	  					<span class="sr-only">Toggle Navigation</span>
+	  					<span class="icon-bar"></span>
+	  					<span class="icon-bar"></span>
+	  					<span class="icon-bar"></span>
+	  				</button>
+	  			</div>
+	  			<div class=" navbar-collapse collapse navBarCollapse" id="navBarCollapse">
+	  				
+	      			<ul class="nav navbar-nav col-md-6">
+						<li class="navBarBtns"ng-click="tab = 1"><a href="######">Home</a></li>
+						<li class="navBarBtns"ng-click="tab = 2"><a href="######">About</a></li>
+						<li class="navBarBtns"ng-click="tab = 3"><a href="######">My Craftbox</a></li>
+						<li class="navBarBtns"ng-click="tab = 3"><a href="######">Submit a Craft!</a></li>
 
 							<!-- <li ng-click="tab = 4"><a href="######">Holiday Crafts</a></li> -->
+					</ul>
+						<ul class="nav navbar-nav navbar-right col-md-3 col-md-offset-3 ">
+							
+							<li class="pull-right"><a class="login pull-right" href="#">Log in</a></li>
+							<li class="pull-right"><a class="signup pull-right" href="#">Sign Up</a></li>
+							
 						</ul>
-						<ul class="nav navbar-nav navbar-right col-md-2 col-md-offset-4 text-right">
-							
-							<li><a class="login" href="#">Log in</a></li>
-							
-							<li><a class="signup" href="#">Sign Up</a></li>
-							
-						</ul>
-	    			</div>
 	    		</div>
 			</div>
-		</nav>
-  	</div>
+		</div>
+  
 
 
 	
@@ -69,7 +69,7 @@
 	<div class="craftFinder">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-md-8 text-left indentParagraph1" >
+				<div class="col-md-12 text-left indentParagraph1" >
 					<div class="buildACraft">Build-A-Craft <span class="small">(find crafts with supplies you have on hand)</span> </div>
 					<p class="indentParagraph2" >Add your supplies here: </p>
 
@@ -83,21 +83,17 @@
 	<form>
 		<div class="row">
 			<div class="form-group col-md-3" >
-				<select ng-model="material01" ng-options="material as material.name for material in materials" ng-change="projectMaterials($index)" id="inputIngredient">
+				<select class="select-style"ng-model="material01" ng-options="material as material.name for material in materials" ng-change="projectMaterials($index)" id="inputIngredient">
 				</select>
 			</div>
-				<!-- <div class=" col-md-1 glyphicon glyphicon-plus text-center">
-
-				</div> -->
+				
 			<div class="form-group col-md-3" >
-				<select ng-model="material02" ng-options="material as material.name for material in materials"  id="inputIngredient">
+				<select class="select-style"ng-model="material02" ng-options="material as material.name for material in materials"  id="inputIngredient">
 				</select>
 			</div>
-				<!-- <div class=" col-md-1 glyphicon glyphicon-plus text-center">
-
-				</div> -->
+				
 			<div class="form-group col-md-3" >
-				<select ng-model="material03" ng-options="material as material.name for material in materials"  id="inputIngredient">
+				<select class="select-style"ng-model="material03" ng-options="material as material.name for material in materials"  id="inputIngredient">
 				</select>
 			</div>
 
