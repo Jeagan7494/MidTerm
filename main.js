@@ -212,6 +212,7 @@ $scope.submitProject = function() {
 
 	
 }
+
 $scope.open = function (index) {
 	$scope.selectedCraft = $scope.crafts[index]
 	console.log($scope.selectedCraft)
