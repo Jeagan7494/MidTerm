@@ -212,6 +212,24 @@ $scope.submitProject = function() {
 
 	
 }
+<<<<<<< HEAD
+
+$scope.open = function (index) {
+	$scope.selectedCraft = $scope.crafts[index]
+	console.log($scope.selectedCraft)
+    var modalInstance = $modal.open({
+      animation: $scope.animationsEnabled,
+      templateUrl: 'craftModal',
+      controller: 'ModuleController',
+      resolve: {
+        items: function () {
+          return $scope.selectedCraft;
+        }
+      }
+=======
+>>>>>>> 50b36451c8f900d6facf4d8be09d4af884f62276
+
+
 
 $scope.open = function (index) {
 	$scope.selectedCraft = $scope.crafts[index]
@@ -227,28 +245,31 @@ $scope.open = function (index) {
       }
 
     });
+  //   $scope.cancel = function () {
+  //   $modalInstance.dismiss('close');
+  // };
 }
 
 
-$scope.open = function (index) {
-	$scope.selectedCraft = $scope.crafts[index]
-	console.log($scope.selectedCraft)
-    var modalInstance = $modal.open({
-      animation: $scope.animationsEnabled,
-      templateUrl: 'logInModal',
-      controller: 'ModuleController',
-      resolve: {
-        items: function () {
-          return $scope.selectedCraft;
-        }
-      }
+// $scope.open = function (index) {
+// 	$scope.selectedCraft = $scope.crafts[index]
+// 	console.log($scope.selectedCraft)
+//     var modalInstance = $modal.open({
+//       animation: $scope.animationsEnabled,
+//       templateUrl: 'logInModal',
+//       controller: 'ModuleController',
+//       resolve: {
+//         items: function () {
+//           return $scope.selectedCraft;
+//         }
+//       }
 
-    });
-}
+//     });
+// }
 }])
 
 
-angular.module('craftApp').controller('ModuleController', ['$scope', '$modalInstance', 'items', function($scope, $modalInstance, items) {
+angular.module('ui.bootstrap').controller('ModuleController', ['$scope', '$modalInstance', 'items', function($scope, $modalInstance, items) {
 	$scope.selectedCraft = items;
 
 
@@ -256,6 +277,9 @@ angular.module('craftApp').controller('ModuleController', ['$scope', '$modalInst
 $scope.close = function () {
 	$modalInstance.close($scope.selectedCraft);
 };
+// $scope.cancel = function () {
+//     $modalInstance.dismiss('close');
+//   };
 	
 }])
 

@@ -113,6 +113,7 @@
  
 
 <!--===============================CRAFT THUMBNAILS=============================-->
+	
 	<div class="container craftsss">
 		<div class="row">
 			<div ng-repeat="object in crafts"  class="row col-md-2 craftDisplay">
@@ -122,7 +123,7 @@
 				</div>
 			</div>
 	<!--===================Craft Modal===================================-->
-			
+			<div ng-controller="ModuleController" class="modal fade"> <!--NOT SURE ID ng-controller needs to be here-->
 			<script type="text/ng-template" id="craftModal" >
 				
 						<div class="modal-header">
@@ -141,12 +142,13 @@
       					</div>
       				
 			</script>
+			</div>	
 		</div>	
 	</div>
 <!--===================================== Craft form ===========================-->
 
 
-<div class="col-md-12 col-sm-4 col-sm-offset-1 text-right">
+<!-- <div class="col-md-12 col-sm-4 col-sm-offset-1 text-right">
 						<form class="form-inline">
   						<div class="form-group">
     						<label for="craftName">Name of Craft</label>
@@ -161,7 +163,7 @@
     						<input type="instructions" id="inputInstructions" placeholder="Enter instructions here">
   						</div>
 					</form>
-				</div>
+				</div> -->
 
 
 
