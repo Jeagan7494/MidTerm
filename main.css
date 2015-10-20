@@ -103,9 +103,10 @@ font-weight: normal;
 
 .craftDisplay {
 	display: inline-block;
-	float:left;
+	
 	margin: 0 auto;
 	padding: 0;
+	vertical-align: top;
 }
 
 
