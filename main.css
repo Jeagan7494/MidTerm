@@ -178,4 +178,20 @@ font-weight: normal;
 .select-style select:focus {
     outline: none;
 }
+.label {
+	color: black;
+	font-size: 14px;
+}
 
+.signup1{
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 150px;
+    text-align: right;
+}
+.signup2 {
+  display: inline-block;
+  float: left;
+  margin-bottom: 10px;
+}

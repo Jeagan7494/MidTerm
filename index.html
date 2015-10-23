@@ -53,15 +53,64 @@
 						</ul>
 							<ul class="nav navbar-nav navbar-right col-md-3 col-md-offset-3 ">
 								
-								<li class="pull-right"><a class="login pull-right" href="#">Log in</a></li>
-								<li class="pull-right"><a class="signup pull-right" href="#">Sign Up</a></li>
+								<li class="pull-right"><a ng-click="open($index)" data-toggle="modal" data-target="#logIn" class="pull-right" href="#">Log in</a></li>
+								<li class="pull-right"><a ng-click="open($index)" data-toggle="modal" data-target="#signUp"class="pull-right" href="#">Sign Up</a></li>
 								
 							</ul>
 		    		</div>
 				</div>
 			</div>
-	  
+	  <!--=============================LOG IN MODAL===============================-->
+	  	<div id="logIn" class=" container modal fade">
+	    	<div class="modal-dialog">
+	        	<div class="modal-content">
+	        		<div class="modal-header">
+	            		<h3>Log In</h3>
+	        		</div>
+	        		<div class="modal-body">
+			            <form class="login" name="login">
+				            <label class="label" for="email">Email:</label><br>
+				            <input type="text login" name="email" size="50"><br>
+				            <label class="label" for="password">Password:</label><br>
+				            <input type="password login" name="password" size="50" ><br>
+		        		</form>
+    				</div>
+	        			<div class="modal-footer">
+	                		<input class="btn btn-success" type="submit" value="Submit" id="submit">       
+	                		<input class="btn btn-default" type="button" data-dismiss="modal" aria-hidden="true" value="Close" id="close">
+	        			</div>
+	        	</div>
+	        </div>
+	    </div>
+	<!--=============================SIGN UP MODAL================================-->
 
+	<div id="signUp" class=" container modal fade">
+	    	<div class="modal-dialog">
+	        	<div class="modal-content">
+	        		<div class="modal-header">
+	            		<h3>Sign Up</h3>
+	        		</div>
+	        		<div class="modal-body">
+			            <form class="signup" name="signup">
+				            <label class="label signup1" for="firstName">First Name:</label>
+				            <input class="signup2"type="text" name="firstName" size="50"><br>
+				            <label class="label signup1" for="lastName">Last Name:</label>
+				            <input class="signup2"type="text" name="lastName" size="50"><br>
+				            <label class="label signup1" for="email">Email:</label>
+				            <input class="signup2" type="text" name="email" size="50"><br>
+				            <label class="label signup1" for="password">Password:</label>
+				            <input class="signup2" type="password" name="password" size="50" ><br>
+				            <label class="label signup1" for="confirm">Confirm Password:</label>
+				            <input class="signup2" type="password" name="confirm" size="50" ><br>
+		        		</form>
+    				</div>
+	        			<div class="modal-footer">
+	                		<input class="btn btn-success" type="submit" value="Submit" id="submit">       
+	                		<input class="btn btn-default" type="button" data-dismiss="modal" aria-hidden="true" value="Close" id="close">
+	        			</div>
+	        	</div>
+	        </div>
+	    </div>
 
 		
 		<!--+++++++++++++++++++++++++++CRAFT SEARCH FORM++++++++++++++++++++++++++++++-->
