@@ -214,27 +214,16 @@ angular.module('craftApp').controller('mainController', ['$scope', '$modal', fun
 	}
 
 
+
+
+//======================================Craft Form Inputs===========================//
+	$scope.steps = [{}];
+	$scope.add = function() {
+	    $scope.steps.push({});
+	  };
+
+
 }])
-
-// angular.module('craftApp').controller('ModuleController', ['$scope', '$modalInstance', 'items', function($scope, $modalInstance, items) {
-// 	$scope.selectedCraft = items;
-
-
-
-// $scope.close = function () {
-// 	$modalInstance.close($scope.selectedCraft);
-// };
-// $scope.close = function () {
-//     $modalInstance.dismiss('close');
-//   };
-	
-// }])
-
-
-
-
-
-
 
 
 

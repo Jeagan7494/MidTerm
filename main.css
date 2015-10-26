@@ -195,3 +195,36 @@ font-weight: normal;
   float: left;
   margin-bottom: 10px;
 }
+
+.craftHeader {
+	margin-top: 2rem;
+	margin-bottom: 3rem;
+	text-align: center;
+	font-size: 2.5rem;
+	font-weight: bold;
+
+}
+.submitCraftPage {
+	background-color: #e3e3e3;
+}
+
+.craftSubmitBtn {
+	margin-top: 1rem;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
