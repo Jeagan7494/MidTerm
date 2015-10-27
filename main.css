@@ -1,27 +1,31 @@
 .background {
-	background-color: #e3e3e3 ;
+	background-color: #FFE17F ;
 
 }
+body {
+	padding-top: 6rem;
+}
 
+.spacer {
+	padding-top: 10rem;
+}
 .navbar-default .navbar-nav > li > a {
-    color: #F1F1DA;
+    color: #FFFFFF;
+    margin-top: 1.5rem;
 }
 
 .navbar-default {
-	background-color: #1D404E;
-	border-color: #0C596F;
+	background-color: #95D5D7;
+	border-color: #FFFFFF;
 	margin-bottom: 0px;
-	font-size: 18px;
+/*	margin-top: 3rem;*/
+	font-size: 22px;
 	border-radius: 0;
+	height: 8rem;
 
 
 }
-.brand {
-    position: absolute;
-    left: 50%;
-    margin-left: -50px !important;  /* 50% of your logo width */
-    display: block;
-}
+
 
 .mainHeading {
 	background-color: #878787;
@@ -29,17 +33,20 @@
 
 }
 
-.headerContent {
+.mainLogo {
 	/*margin-top: 5rem;*/
 	display: block;
 	margin: 0 auto;
-	text-align: center;
-	height: 15%;
-	width: 15%;
-	min-height: 150px;
-	min-width: 150px;
+	max-width: 200px;
+	margin-top: 10px;
 }
 
+.logoContainer {
+	position: absolute;
+	top: 0;
+	margin: 0 45%;
+	z-index: 10;
+}
 .logIn {
 	float: right;
 
@@ -58,7 +65,9 @@
 .craftsss {
 	border-top: 1px solid gray;
 	padding-top: 25px;
-	margin-left: -50px;
+	/*margin-left: -50px;*/
+	margin: 0 auto;
+
 }
 
 .buildACraft {
@@ -83,9 +92,9 @@ font-weight: normal;
 }*/
 
 .thumbnail {
-	display: inline-block;
-	height: 150px;
-	width: 150px;
+	display: block;
+	height: 250px;
+	width: 250px;
 	margin-bottom: 0;
 
 }
@@ -93,11 +102,13 @@ font-weight: normal;
 .craftTitle {
 	display: block;
 	font-family: Georgia, Serif;
-	font-size: 16px;
+	font-size: 20px;
 	font-weight: 600;
 	margin-bottom: 75px;
-	width:150px;
+	width:250px;
 	text-align: center;
+	
+	
 
 }
 .description {
@@ -107,10 +118,12 @@ font-weight: normal;
 
 .craftDisplay {
 	display: inline-block;
-	
 	margin: 0 auto;
 	padding: 0;
 	vertical-align: top;
+	text-align: center;
+
+	/*margin-left: 50px;*/
 }
 
 
@@ -121,25 +134,7 @@ font-weight: normal;
 /*.suppliesSearch {
 	border-bottom: 1px solid gray;
 
-}*/
 
-/*.mainNavBar {
-	background-color: #41948F ;
-	border-radius: 5px;
-	margin-top: 70px;
-	height: 3rem;
-	width: 95vw;
-	text-align: center;
-	margin: auto;
-	position: fixed;
-
-}
-
-.mainNavBar a {
-	text-decoration: none;
-	color: white;
-	font-family: cursive;
-	font-size: 1.5rem;
 }
 */
 /*@media (min-width:768px) { 
@@ -216,7 +211,18 @@ font-weight: normal;
 	margin-top: 1rem;
 	
 }
+/*.craftFinder {
+	text-align: center;
+}
+*/
 
+.form-group {
+	/*margin: 10px;*/
+	display: inline-block;
+	left: 140px;
+	/*padding: 40px;*/
+
+}
 
 
 
