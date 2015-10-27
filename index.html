@@ -17,6 +17,7 @@
 
 	<body class="background" ng-controller="mainController">
 
+<<<<<<< HEAD
 	<!--==================================SCRAPZ HEADING=================================-->
 		<!-- <div class="mainHeading">
 			<div class="container-fluid">
@@ -28,9 +29,11 @@
 			<!-- 	 -->
 			</div>
 		</div> -->
+=======
+>>>>>>> d2a69322417cc3f42aac466659530113fd3ee31e
 	<!-- ====================Fixed navigation bar=======================================-->
 
-		
+		<div class="logoContainer"><img class="mainLogo" src="media/ScapzLightLogo.png" /></div>
 			<div class="navbar navbar-default" role="navigation">
 		  		<div class="container-fluid">
 		  			<div class="navbar-header">
@@ -41,8 +44,12 @@
 		  					<span class="icon-bar"></span>
 		  				</button>
 		  			</div>
+<<<<<<< HEAD
 		  			<a class="brand" style="margin: 0; float: none; text-align:center" href="#"><img class="headerContent" src="media/LGscrapzlogo.png" /></a>
 
+=======
+		  			
+>>>>>>> d2a69322417cc3f42aac466659530113fd3ee31e
 		  			<div class=" navbar-collapse collapse navBarCollapse" id="navBarCollapse">
 		  				
 		      			<ul class="nav navbar-nav col-md-6">
@@ -53,7 +60,8 @@
 
 								<!-- <li ng-click="tab = 4"><a href="######">Holiday Crafts</a></li> -->
 						</ul>
-							<ul class="nav navbar-nav navbar-right col-md-3 col-md-offset-3 ">
+
+							<ul class="nav navbar-nav navbar-right col-md-3">
 								
 								<li class="pull-right"><a ng-click="open($index)" data-toggle="modal" data-target="#logIn" class="pull-right" href="#">Log in</a></li>
 								<li class="pull-right"><a ng-click="open($index)" data-toggle="modal" data-target="#signUp"class="pull-right" href="#">Sign Up</a></li>
@@ -62,6 +70,7 @@
 		    		</div>
 				</div>
 			</div>
+			<div class="spacer"></div>
 	  <!--=============================LOG IN MODAL===============================-->
 	  	<div id="logIn" class=" container modal fade">
 	    	<div class="modal-dialog">
@@ -128,7 +137,7 @@
 			</div>
 		</div>
 	
-	<div class="container suppliesSearch">
+	<div class="container-fluid suppliesSearch">
 		<form>
 			<div class="row">
 				<div class="form-group col-md-3" >
@@ -161,9 +170,9 @@
 
 	<!--===============================CRAFT THUMBNAILS=============================-->
 		
-		<div class="container craftsss">
+		<div class="container-fluid craftsss">
 			<div class="row">
-				<div ng-repeat="object in crafts"  class="row col-md-2 craftDisplay">
+				<div ng-repeat="object in crafts"  class="col-md-4 craftDisplay">
 					<div ng-show="object.craftDisplay" >
 						<img ng-click="open($index)" data-toggle="modal" data-target="#craftModal" class ="thumbnail" ng-src="{{object.craftThumbnail}}"/>
 						<div class= "craftTitle">{{object.craftName}}</div> 
